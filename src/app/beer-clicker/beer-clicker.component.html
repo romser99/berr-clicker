@@ -1,0 +1,35 @@
+<div class="container" >
+  <div class="left-menu">
+    <app-beer-creation-menu></app-beer-creation-menu>
+  </div>
+  <div class="game-area">
+    <p>{{ pintes }}</p>
+    <img src="assets/images/verre.png" usemap="#image-map" alt="beer-image" />
+
+    <map name="image-map">
+      <area
+        style="cursor:pointer;"
+        (click)="compteur()"
+        nohref
+        coords="70,269,62,183,54,72,55,50,90,22,146,18,181,27,217,52,220,85,260,86,276,101,277,190,257,208,211,216,207,270,177,281,112,282"
+        shape="poly"
+      />
+    </map>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="imageMapResizer.min.js"></script>
+    <script>
+      $(document).ready(function (e) {
+        $("map").imageMapResize();
+      });
+    </script>
+  </div>
+  <div class="right-menu">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+</div>
+

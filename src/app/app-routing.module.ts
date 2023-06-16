@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { BeerClickerComponent } from './beer-clicker/beer-clicker.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'beer-clicker', component: BeerClickerComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-menu {
+  width:25vw;
+  background-image: linear-gradient(180deg, rgba(197, 103, 66, 1) 0%, rgba(233, 149, 69, 1) 33.85%, rgba(244, 215, 144,1) 67.19%, #EEE5D7);
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 10px 10px;
+  border:5px #333;
+  height:90vh;
+  margin: 10px 10px 10px 10px;
+}
+
+.game-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  /* Add desired styles */
+}
+
+.right-menu {
+  width: 200px;
+  /* Add desired styles */
+}
+
+
+
+
+

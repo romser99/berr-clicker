@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Hop 1",
+    "category":"hop",
+    "alpha": 5,
+    "flavorProfile": {
+      "bitterness": 4,
+      "aroma": 3
+    },
+    "description": "sqdqsfsfsfdsgfhjgdfgxdhdfgfjkdudkfgdhdf <dfsgdfhqdgsfdgdffhgdgdfhr fdgfghdggdg"
+  },
+  {
+    "name": "Hop 2",
+    "category":"hop",
+    "alpha": 10,
+    "flavorProfile": {
+      "bitterness": 5,
+      "aroma": 4
+    },
+    "description": "sqdqsfsfgdg"
+  },
+  {
+    "name": "Hop 3",
+    "category":"hop",
+    "alpha": 15,
+    "flavorProfile": {
+      "bitterness": 3,
+      "aroma": 5
+    },
+    "description": "sqdqsfsfgdg"
+  }
+]

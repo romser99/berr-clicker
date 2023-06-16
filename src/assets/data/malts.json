@@ -1,0 +1,36 @@
+[
+    {
+      "name": "Malt 1",
+      "category":"malt",
+      "ebc": 10,
+      "flavorProfile": {
+        "sweetness": 3,
+        "maltiness": 4,
+        "roastiness": 1
+      },
+      "description": "sqdqsfsfgdg"
+    },
+    {
+      "name": "Malt 2",
+      "category":"malt",
+      "ebc": 20,
+      "flavorProfile": {
+        "sweetness": 2,
+        "maltiness": 3,
+        "roastiness": 2
+      },
+      "description": "sqdqsfsfgdsffgjhfjdg"
+    },
+    {
+      "name": "Malt 3",
+      "category":"malt",
+      "ebc": 30,
+      "flavorProfile": {
+        "sweetness": 1,
+        "maltiness": 2,
+        "roastiness": 3
+      },
+      "description": "4568686qsfsfgdg"
+    }
+
+]

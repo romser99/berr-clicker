@@ -1,0 +1,137 @@
+
+  <div class="tooltip-container">
+    <!-- Detailed Information Section -->
+
+
+    <!-- Beer Profile Section -->
+    <div class="beer-overview">
+      <h2>Your Beer</h2>
+      <div class="beer-profile">
+        <span class="profile-item">
+          <span>ABV:</span>
+          <span>{{ beerProfile.ABV | number: '1.1-1' }}</span>
+        </span>
+        <span class="profile-item">
+          <span>EBC:</span>
+          <span>{{ beerProfile.EBC | number: '1.1-1' }}</span>
+        </span>
+        <span class="profile-item">
+          <span>IBU:</span>
+          <span>{{ beerProfile.IBU | number: '1.1-1' }}</span>
+        </span>
+      </div>
+    </div>
+    <div class="detailed-info">
+      <ng-container [ngSwitch]="getIngredientCategory()">
+        <ng-container *ngSwitchCase="'malt'" class="item-info">
+          <div class="item-container">
+            <p class="item-name">{{selectedIngredient.name}}</p>
+            <p class="item-property">EBC : {{selectedIngredient.ebc}}</p>
+          </div>
+          <p class="item-description">{{selectedIngredient.description}}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'hop'" class="item-info">
+          <div class="item-container">
+            <p class="item-name">{{selectedIngredient.name}}</p>
+            <p class="item-property">Alpha : {{selectedIngredient.alpha}} %</p>
+          </div>
+          <p class="item-description">{{selectedIngredient.description}}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'misc'" class="item-info">
+          <div class="item-container">
+            <p class="item-name">{{selectedIngredient.name}}</p>
+          </div>
+          <p class="item-description">{{selectedIngredient.description}}</p>
+        </ng-container>
+      </ng-container>
+    </div>
+
+
+  </div>
+
+
+
+  <div class="navigation-buttons">
+    <button class="dropdown-btn" (click)="toggleDropdown('malts')">Malts</button>
+    <button class="dropdown-btn" (click)="toggleDropdown('hops')">Houblons</button>
+    <button class="dropdown-btn" (click)="toggleDropdown('miscIngredients')">Misc Ingredients</button>
+    <button class="confirmation-btn" (click)="calculateBeerProfile()" style="float:right;">Brew This</button>
+  </div>
+
+  <div class="dropdown">
+
+    <div class="ingredient-dropdown" *ngIf="showDropdown('malts')">
+      <ul>
+        <li *ngFor="let malt of malts">
+          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(malt)" (mouseleave)="setSelectedIngredient(null)">
+            <img src="assets/images/malt1.png" alt="Ingredient Image" class="ingredient-image" />
+            <div class="ingredient-details">
+              <div class="ingredient-name">{{ malt.name }}</div>
+            </div>
+            <div class="ingredient-input">
+              <input type="checkbox" [checked]="malt.checked" (change)="handleCheckboxChange(malt)"/>
+              <div *ngIf="malt.checked" class="quantity-input">
+                <input type="number" [(ngModel)]="malt.quantityPerLiter" (change)="handleQuantityChange(malt, malt.quantityPerLiter)" placeholder="Quantity per liter" min="0"/>
+
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <!-- ...other code... -->
+
+    <!-- New element to display the detailed information -->
+
+
+
+
+  <div class="dropdown">
+
+    <div class="ingredient-dropdown" *ngIf="showDropdown('hops')">
+      <ul>
+        <li *ngFor="let hop of hops">
+          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(hop)" (mouseleave)="setSelectedIngredient(null)">
+            <img src="assets/images/hop1.png" alt="Ingredient Image" class="ingredient-image" />
+            <div class="ingredient-details">
+              <div class="ingredient-name">{{ hop.name }}</div>
+            </div>
+            <div class="ingredient-input">
+              <input type="checkbox" [checked]="hop.checked" (change)="handleCheckboxChange(hop)"/>
+              <div *ngIf="hop.checked" class="quantity-input">
+                <input type="number" [(ngModel)]="hop.quantityPerLiter" (change)="handleQuantityChange(hop, hop.quantityPerLiter)" placeholder="Quantity per liter" min="0" />
+
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="dropdown">
+
+    <div class="ingredient-dropdown" *ngIf="showDropdown('miscIngredients')">
+      <ul>
+        <li *ngFor="let miscIngredient of miscIngredients">
+          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(miscIngredient)" (mouseleave)="setSelectedIngredient(null)">
+            <img src="assets/images/pomme1.png" alt="Ingredient Image" class="ingredient-image" />
+            <div class="ingredient-details">
+              <div class="ingredient-name">{{ miscIngredient.name }}</div>
+            </div>
+            <div class="ingredient-input">
+              <input type="checkbox" [checked]="miscIngredient.checked" (change)="handleCheckboxChange(miscIngredient)"/>
+              <div *ngIf="miscIngredient.checked" class="quantity-input">
+                <input type="number" [(ngModel)]="miscIngredient.quantityPerLiter" (change)="handleQuantityChange(miscIngredient, miscIngredient.quantityPerLiter)" placeholder="Quantity per liter" min="0" />
+
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+

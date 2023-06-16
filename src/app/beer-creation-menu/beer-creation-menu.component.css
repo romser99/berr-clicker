@@ -1,0 +1,172 @@
+.ingredient-dropdown {
+  max-height: 50%; /* Adjust the height as per your preference */
+  overflow-y: auto;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.ingredient-image {
+  width: 50px; /* Adjust the image width as per your preference */
+  height: 50px; /* Adjust the image height as per your preference */
+  margin-right: 10px;
+}
+
+.ingredient-name {
+  font-weight: bold;
+}
+
+
+
+.ingredient-input {
+  margin-left: auto;
+}
+
+.quantity-input {
+  margin-top: 5px;
+}
+
+.description-text {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5f5f5;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  max-width: 200px;
+  white-space: pre-wrap;
+}
+
+
+
+
+
+
+.tooltip-container {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 35%; /* Adjust the height as per your preference */
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Prevent the content from overflowing */
+}
+
+.detailed-info {
+  background-color: #f1daca;
+  height: 50%; /* Adjust the height as per your preference */
+  margin: 5% 5% 5% 5%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  overflow: auto; /* Enable scrolling if the content exceeds the container height */
+}
+
+
+.beer-profile {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.beer-overview {
+  text-align: center;
+  background-color: #f1daca;
+  height: 30%; /* Adjust the height as per your preference */
+  margin: 5% 5% 5% 5%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.beer-overview h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+
+.item-info {
+  margin-top: 10px;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.item-name {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.item-property {
+  margin-left: auto;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.item-description{
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+.navigation-buttons{
+  margin:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+  width: 90%;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.dropdown-btn {
+  background-color: #8B4513; /* Update the background color of the buttons */
+  color: #f1daca;
+  border: none;
+}
+
+.dropdown-btn:hover {
+  background-color: #b7652a;
+  color: #f1daca;
+  border: none;
+}
+
+.confirmation-btn{
+  background-color: #8B4513;
+  color: #f1daca;
+  border: none;
+
+}
+.confirmation-btn:hover {
+  background-color: #b7652a;
+  color: #f1daca;
+  border: none;
+}
+
+
+
+
+
+
+
+/* Existing CSS styles */

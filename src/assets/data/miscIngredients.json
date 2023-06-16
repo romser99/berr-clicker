@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Fruit 1",
+    "category":"misc",
+    "flavorProfile": {
+      "sweetness": 5,
+      "fruityness": 4
+    }
+  },
+  {
+    "name": "Fruit 2",
+    "category":"misc",
+    "flavorProfile": {
+      "sweetness": 4,
+      "fruityness": 3
+    }
+  },
+  {
+    "name": "Honey",
+    "category":"misc",
+    "flavorProfile": {
+      "sweetness": 5,
+      "aroma": 4
+    }
+  }
+]
