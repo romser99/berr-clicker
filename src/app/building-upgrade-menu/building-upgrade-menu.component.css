@@ -1,0 +1,147 @@
+.upgrade-container {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 35%;
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.upgrade-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.upgrade-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+
+.upgrade-cost {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+
+.building-container {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 60%;
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+
+.building-dropdown {
+  max-height: 50%;
+  overflow-y: auto;
+}
+
+.building-item {
+
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.building-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+
+}
+.upgrade-image {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.building-name {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.building-numbers{
+  margin-left: auto;
+  float:right
+}
+
+.building-amount{
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.building-cost{
+  font-size: 10px;
+  margin-bottom : 0;
+
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin-left : 5%;
+  margin-right : 5%;
+}
+
+li {
+  margin-bottom : 5px;
+  background-color : #f1daca;
+  border : 3px solid black;
+  border-radius : 3px;
+  padding: 5px;
+}
+
+.unavailable-upgrade {
+  filter: grayscale(50%) opacity(0.5);
+}
+
+li.disabled {
+  display: none;
+}
+.popup {
+  position: absolute;
+  background-color: #f1daca;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width : 18vw
+
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top : 0
+}
+
+
+.description {
+  font-size: 12px;
+  margin-top: 5px;
+}

@@ -6,7 +6,6 @@
 .ingredient-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   margin-right: 10px;
 }
 
@@ -123,6 +122,7 @@
   margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
+  font-size : 12px
 
 }
 
@@ -164,7 +164,20 @@
 }
 
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left : 5%;
+  margin-right : 5%
+}
 
+li {
+  margin-bottom : 5px;
+  background-color : #f1daca;
+  border : 3px solid black;
+  border-radius : 3px;
+  padding: 5px;
+}
 
 
 

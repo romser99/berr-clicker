@@ -3,18 +3,32 @@
     <app-beer-creation-menu></app-beer-creation-menu>
   </div>
   <div class="game-area">
-    <p>{{ pintes }}</p>
-    <img src="assets/images/verre.png" usemap="#image-map" alt="beer-image" />
+    <div class="topmenu">
+      <button class="achievements-btn" (click)="toggleAchievements()">
+        <img src="assets/images/Menu.png" alt="Menu Icon">
+      </button>
+    </div>
+    <app-achievements class="achievementsMenu" *ngIf="achievementMenu"></app-achievements>
+    <div class="scorediv">
 
+        <h2 style="margin:0">{{ money | scientificNotation }} €</h2>
+        <h4 style="margin:0">+ {{ ((beerMultiplier * revenue) -  cost) * this.totalLPS | scientificNotation }}€/s</h4>
+
+    </div>
+
+     <img src="assets/images/verre.png" usemap="#image-map" alt="beer-image" />
     <map name="image-map">
       <area
         style="cursor:pointer;"
-        (click)="compteur()"
+        (click)="compteur($event)"
         nohref
         coords="70,269,62,183,54,72,55,50,90,22,146,18,181,27,217,52,220,85,260,86,276,101,277,190,257,208,211,216,207,270,177,281,112,282"
         shape="poly"
       />
     </map>
+    <div class="popup" *ngFor="let popup of popups" [style.left.px]="popup.x" [style.top.px]="popup.y">
+      {{ popup.text }}
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="imageMapResizer.min.js"></script>
@@ -23,13 +37,10 @@
         $("map").imageMapResize();
       });
     </script>
+    <button  (click)="toggleAutoIncome()">{{ autoIncomeEnabled ? 'AutoBrew On' : 'AutoBrew Off' }}</button>
   </div>
   <div class="right-menu">
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
+    <app-building-upgrade-menu></app-building-upgrade-menu>
   </div>
 </div>
 

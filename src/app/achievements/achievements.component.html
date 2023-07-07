@@ -1,0 +1,19 @@
+<div class="encapsulation">
+  <div class="navigation-buttons">
+    <button class="dropdown-btn" (click)="toggleDropdown('succes')">Succès</button>
+    <button class="dropdown-btn" (click)="toggleDropdown('tuto')">Tutorial</button>
+  </div>
+  <div class="infos" *ngIf="showDropdown('succes')">
+    <p>WIP WIP WIP WIP WIP</p>
+  </div>
+  <div class="infos" *ngIf="showDropdown('tuto')">
+    <p class="tuto">Bienvenue Dans Beer Clicker !!!</p>
+    <p class="tuto">Clique sur la grosse choppe au centre pour brasser et vendre ta bière</p>
+    <p class="tuto">Utilises l'argent que tu gagnes pour acheter des bâtiments générant de la bière à ta place</p>
+    <p class="tuto">Dévérouilles aussi des ingrédients pour brasser différentes bières et multiplier l'argnet que tu génère !!!</p>
+    <p class="tuto">Quand tu penses avoir fait une bonne recette cliques sur "brew this" (il est recommendé de mettre en off la production auto quand tu testes des recettes)</p>
+    <p class="tuto">Pour commencer dévérouilles le malt Pilsner et le houblon East-kent-Goldings et brasses une bière avec 0.25kg/L de Pilsner et 2g/L de East-Kent</p>
+    <p class="tuto">Bon Brassage !!!</p>
+    <p class="tuto">PS : pour commencer cliques sur l'icone houblon (c'est le gros truc vert) pour cacher/rendre visible cette fenètre</p>
+  </div>
+</div>

@@ -14,20 +14,122 @@
   height:90vh;
   margin: 10px 10px 10px 10px;
 }
+.right-menu {
+  width:25vw;
+  background-image: linear-gradient(180deg, rgba(197, 103, 66, 1) 0%, rgba(233, 149, 69, 1) 33.85%, rgba(244, 215, 144,1) 67.19%, #EEE5D7);
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 10px 10px;
+  border:5px #333;
+  height:90vh;
+  margin: 10px 10px 10px 10px;
+}
 
 .game-area {
+  height : 100%;
   flex-grow: 1;
+  width : 30vw;
   display: flex;
   flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  /* Add desired styles */
+  align-items: center
+
 }
 
-.right-menu {
-  width: 200px;
-  /* Add desired styles */
+
+.scorediv {
+  background-color: #f1daca;
+  text-align: center;
+  height: 10vh; 
+  width: 20vw;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.autobutton {
+  align-self: flex-start;
+  margin-top : 6%
+}
+
+.popup-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  animation: fadeOutUp 2s linear;
+  pointer-events: none;
+}
+
+.achievementsMenu {
+  position: absolute;
+  top : 25%;
+  align-self: center;
+  background-color: #654321;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px 10px 10px 10px;
+  border:5px #333;
+}
+
+.achievements-btn {
+  background: transparent;
+  outline: none;
+  border : none;
+  position : relative;
+
+
+}
+
+.achievements-btn :hover {
+  filter: grayscale(35%) opacity(1);
+}
+
+.topmenu {
+  margin-top : 5vh;
+  margin-bottom : 2vh;
+  width : 90%;
+  height : 10vh;
+  background-image: linear-gradient(180deg, rgba(197, 103, 66, 1) 0%, rgba(233, 149, 69, 1) 33.85%, rgba(244, 215, 144,1) 67.19%, #EEE5D7);
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 10px 10px;
+  border:5px #333;
+}
+
+
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+
 
 
 

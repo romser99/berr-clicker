@@ -1,36 +1,60 @@
 [
     {
-      "name": "Malt 1",
+      "name": "Pilsner",
       "category":"malt",
-      "ebc": 10,
+      "unlockCost":0,
+      "cost":0.7,
+      "ebc": 4,
       "flavorProfile": {
-        "sweetness": 3,
+        "bakyness": 2,
         "maltiness": 4,
         "roastiness": 1
       },
-      "description": "sqdqsfsfgdg"
+      "description": "Malt d'orge de base pour des bières blondes",
+      "image":"assets/images/Ingredients/Pilsner.png"
     },
     {
-      "name": "Malt 2",
+      "name": "Cara-Red",
       "category":"malt",
-      "ebc": 20,
+      "unlockCost":500000,
+      "cost":1.5,
+      "ebc": 50,
       "flavorProfile": {
-        "sweetness": 2,
-        "maltiness": 3,
-        "roastiness": 2
-      },
-      "description": "sqdqsfsfgdsffgjhfjdg"
-    },
-    {
-      "name": "Malt 3",
-      "category":"malt",
-      "ebc": 30,
-      "flavorProfile": {
-        "sweetness": 1,
-        "maltiness": 2,
+        "bakyness": 5,
+        "maltiness": 6,
         "roastiness": 3
       },
-      "description": "4568686qsfsfgdg"
+      "description": "Riche en aromes de céréales et patisserie attention à ne pas trop en ajouter",
+      "image":"assets/images/Ingredients/Carared.png"
+    },
+    {
+      "name": "Pale Wheat",
+      "category":"malt",
+      "unlockCost":10000000,
+      "cost":1.2,
+      "ebc": 2,
+      "flavorProfile": {
+        "bakyness": 2,
+        "maltiness": 2,
+        "roastiness": 1
+      },
+      "description": "Un classique pour réaliser des bières blanches mettant en avant les aromes du houblon et d'autres ingrédients",
+      "image":"assets/images/Ingredients/Palewheat.png"
+    },
+    {
+      "name": "Brown Malt",
+      "category":"malt",
+      "unlockCost":1000000000,
+      "cost":2,
+      "ebc": 150,
+      "flavorProfile": {
+        "bakyness": 7,
+        "maltiness": 4,
+        "roastiness": 8
+      },
+      "description": "Un malt typiquement utilisé dans la fabrication de bières sombres, ses forts aromes de café et sa couleur sombre impose une faible quantité dans le brassin",
+      "image":"assets/images/Ingredients/Brownmalt.png"
     }
+
 
 ]

@@ -1,0 +1,211 @@
+[
+  {
+    "name": "Amber Ale",
+    "category": "archetype",
+    "sell":4,
+    "abv": 5.5,
+    "ebc": 25,
+    "ibu": 35,
+    "flavorProfile": {
+      "bakyness": 3,
+      "maltiness": 6,
+      "roastiness": 3,
+      "floweriness":5,
+      "citrusness": 2,
+      "herbal": 3,
+      "sweetness": 8,
+      "fruityness": 2,
+      "woodyness": 0
+    }
+  },
+  {
+    "name": "IPA",
+    "category": "archetype",
+    "sell":5,
+    "abv": 6.5,
+    "ebc": 15,
+    "ibu": 60,
+    "flavorProfile": {
+      "bakyness": 2,
+      "maltiness": 3,
+      "roastiness": 2,
+      "floweriness": 6,
+      "citrusness": 8,
+      "herbal": 6,
+      "sweetness": 2,
+      "fruityness": 3,
+      "woodyness": 0
+    }
+  },
+  {
+    "name": "Stout",
+    "category": "archetype",
+    "sell":5,
+    "abv": 7.0,
+    "ebc": 50,
+    "ibu": 30,
+    "flavorProfile": {
+      "bakyness": 6,
+      "maltiness": 7,
+      "roastiness": 5,
+      "floweriness": 1,
+      "citrusness": 1,
+      "herbal": 1,
+      "sweetness": 4,
+      "fruityness": 1,
+      "woodyness": 4
+    }
+  },
+  {
+    "name": "Triple Belge",
+    "category": "archetype",
+    "sell":4.5,
+    "abv": 9,
+    "ebc": 10,
+    "ibu": 28,
+    "flavorProfile": {
+      "bakyness": 4,
+      "maltiness": 4,
+      "roastiness": 4,
+      "floweriness": 2,
+      "citrusness": 2,
+      "herbal": 6,
+      "sweetness": 4,
+      "fruityness": 0,
+      "woodyness": 0
+    }
+  },
+  {
+    "name": "Porter",
+    "category": "archetype",
+    "sell":4.5,
+    "abv": 4,
+    "ebc": 40,
+    "ibu": 20,
+    "flavorProfile": {
+      "bakyness": 6,
+      "maltiness": 5,
+      "roastiness": 4,
+      "floweriness": 2,
+      "citrusness": 0,
+      "herbal": 2,
+      "sweetness": 4,
+      "fruityness": 3,
+      "woodyness": 2
+    }
+  },
+  {
+    "name": "Saison",
+    "category": "archetype",
+    "sell":4,
+    "abv": 5,
+    "ebc": 8,
+    "ibu": 40,
+    "flavorProfile": {
+      "bakyness": 2,
+      "maltiness": 2,
+      "roastiness": 1,
+      "floweriness": 8,
+      "citrusness": 4,
+      "herbal": 6,
+      "sweetness": 3,
+      "fruityness": 4,
+      "woodyness": 0
+    }
+  },
+  {
+    "name": "Imperial Stout",
+    "category": "archetype",
+    "sell": 6,
+    "abv":12,
+    "ebc": 70,
+    "ibu": 25,
+    "flavorProfile": {
+      "bakyness": 8,
+      "maltiness": 9,
+      "roastiness": 6,
+      "floweriness": 1,
+      "citrusness": 1,
+      "herbal": 2,
+      "sweetness": 6,
+      "fruityness": 2,
+      "woodyness":6
+    }
+  },
+  {
+    "name": "Pilsner",
+    "category": "archetype",
+    "sell": 2,
+    "abv":4,
+    "ebc": 8,
+    "ibu": 10,
+    "flavorProfile": {
+      "bakyness": 2,
+      "maltiness": 4,
+      "roastiness": 2,
+      "floweriness": 2,
+      "citrusness": 2,
+      "herbal": 2,
+      "sweetness": 1,
+      "fruityness": 1,
+      "woodyness":0
+    }
+  },
+  {
+    "name": "Pale Ale",
+    "category": "archetype",
+    "sell": 3,
+    "abv":3.5,
+    "ebc": 6,
+    "ibu": 15,
+    "flavorProfile": {
+      "bakyness": 1,
+      "maltiness": 2,
+      "roastiness": 2,
+      "floweriness": 4,
+      "citrusness": 4,
+      "herbal": 3,
+      "sweetness": 1,
+      "fruityness": 3,
+      "woodyness":0
+    }
+  },
+  {
+    "name": "eau",
+    "category": "archetype",
+    "sell": 0.1666,
+    "abv":0,
+    "ebc": 0,
+    "ibu": 0,
+    "flavorProfile": {
+      "bakyness": 0,
+      "maltiness": 0,
+      "roastiness": 0,
+      "floweriness": 0,
+      "citrusness": 0,
+      "herbal": 0,
+      "sweetness": 0,
+      "fruityness": 0,
+      "woodyness":0
+    }
+  },
+  {
+    "name": "Cidre",
+    "category": "archetype",
+    "sell": 2,
+    "abv":3,
+    "ebc": 2,
+    "ibu": 0,
+    "flavorProfile": {
+      "bakyness": 1,
+      "maltiness": 1,
+      "roastiness": 1,
+      "floweriness": 0,
+      "citrusness": 0,
+      "herbal": 0,
+      "sweetness": 2,
+      "fruityness": 8,
+      "woodyness":0
+    }
+  }
+]

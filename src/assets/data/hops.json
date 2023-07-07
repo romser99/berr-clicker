@@ -1,32 +1,44 @@
 [
   {
-    "name": "Hop 1",
+    "name": "East-Kent",
     "category":"hop",
-    "alpha": 5,
+    "unlockCost":0,
+    "cost":0.3,
+    "alpha": 5.5,
     "flavorProfile": {
-      "bitterness": 4,
-      "aroma": 3
+      "floweriness": 4,
+      "citrusness": 1,
+      "herbal":5
     },
-    "description": "sqdqsfsfsfdsgfhjgdfgxdhdfgfjkdudkfgdhdf <dfsgdfhqdgsfdgdffhgdgdfhr fdgfghdggdg"
+    "description": "Un Houblon basique aux saveurs légèrement herbeuses et florales",
+    "image":"assets/images/Ingredients/Eastkent.png"
   },
   {
-    "name": "Hop 2",
+    "name": "Citra",
     "category":"hop",
-    "alpha": 10,
+    "unlockCost":100000,
+    "cost":0.5,
+    "alpha": 12.5,
     "flavorProfile": {
-      "bitterness": 5,
-      "aroma": 4
+      "floweriness": 3,
+      "citrusness": 8,
+      "herbal":3
     },
-    "description": "sqdqsfsfgdg"
+    "description": "Houblon donnant de forts aromes d'agrumes à votre brassin",
+    "image":"assets/images/Ingredients/Citra.png"
   },
   {
-    "name": "Hop 3",
+    "name": "Amarillo",
     "category":"hop",
-    "alpha": 15,
+    "unlockCost":4000000,
+    "cost":0.4,
+    "alpha": 8.5,
     "flavorProfile": {
-      "bitterness": 3,
-      "aroma": 5
+      "floweriness":5,
+      "citrusness": 5,
+      "herbal":3
     },
-    "description": "sqdqsfsfgdg"
+    "description": "Un houblon passe-partout rappelant des notes d'agrumes et fleurs",
+    "image":"assets/images/Ingredients/Amarillo.png"
   }
 ]

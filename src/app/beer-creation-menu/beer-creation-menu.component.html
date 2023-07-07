@@ -1,137 +1,134 @@
 
-  <div class="tooltip-container">
-    <!-- Detailed Information Section -->
-
-
-    <!-- Beer Profile Section -->
-    <div class="beer-overview">
-      <h2>Your Beer</h2>
-      <div class="beer-profile">
-        <span class="profile-item">
-          <span>ABV:</span>
-          <span>{{ beerProfile.ABV | number: '1.1-1' }}</span>
-        </span>
-        <span class="profile-item">
-          <span>EBC:</span>
-          <span>{{ beerProfile.EBC | number: '1.1-1' }}</span>
-        </span>
-        <span class="profile-item">
-          <span>IBU:</span>
-          <span>{{ beerProfile.IBU | number: '1.1-1' }}</span>
-        </span>
-      </div>
+<div class="tooltip-container">
+  <div class="beer-overview">
+    <h2>{{beerProfile.name}}</h2>
+    <div class="beer-profile">
+      <span class="profile-item">
+        <span>ABV:</span>
+        <span>{{ beerProfile.ABV | number: '1.1-1' }}</span>
+      </span>
+      <span class="profile-item">
+        <span>EBC:</span>
+        <span>{{ beerProfile.EBC | number: '1.1-1' }}</span>
+      </span>
+      <span class="profile-item">
+        <span>IBU:</span>
+        <span>{{ beerProfile.IBU | number: '1.1-1' }}</span>
+      </span>
     </div>
-    <div class="detailed-info">
-      <ng-container [ngSwitch]="getIngredientCategory()">
-        <ng-container *ngSwitchCase="'malt'" class="item-info">
-          <div class="item-container">
-            <p class="item-name">{{selectedIngredient.name}}</p>
-            <p class="item-property">EBC : {{selectedIngredient.ebc}}</p>
-          </div>
-          <p class="item-description">{{selectedIngredient.description}}</p>
-        </ng-container>
-        <ng-container *ngSwitchCase="'hop'" class="item-info">
-          <div class="item-container">
-            <p class="item-name">{{selectedIngredient.name}}</p>
-            <p class="item-property">Alpha : {{selectedIngredient.alpha}} %</p>
-          </div>
-          <p class="item-description">{{selectedIngredient.description}}</p>
-        </ng-container>
-        <ng-container *ngSwitchCase="'misc'" class="item-info">
-          <div class="item-container">
-            <p class="item-name">{{selectedIngredient.name}}</p>
-          </div>
-          <p class="item-description">{{selectedIngredient.description}}</p>
-        </ng-container>
+  </div>
+  <div class="detailed-info">
+    <ng-container [ngSwitch]="getIngredientCategory()">
+      <ng-container *ngSwitchCase="'malt'" class="item-info">
+        <div class="item-container">
+          <p class="item-name">{{selectedIngredient.name}}</p>
+          <p class="item-property">EBC : {{selectedIngredient.ebc}}</p>
+          <p class="item-property">{{selectedIngredient.cost}}€/kg</p>
+        </div>
+        <p class="item-description">{{selectedIngredient.description}}</p>
       </ng-container>
-    </div>
-
-
+      <ng-container *ngSwitchCase="'hop'" class="item-info">
+        <div class="item-container">
+          <p class="item-name">{{selectedIngredient.name}}</p>
+          <p class="item-property">Alpha : {{selectedIngredient.alpha}} %</p>
+          <p class="item-property">{{selectedIngredient.cost}}€/g</p>
+        </div>
+        <p class="item-description">{{selectedIngredient.description}}</p>
+      </ng-container>
+      <ng-container *ngSwitchCase="'misc'" class="item-info">
+        <div class="item-container">
+          <p class="item-name">{{selectedIngredient.name}}</p>
+          <p class="item-property">{{selectedIngredient.cost}}€/item</p>
+        </div>
+        <p class="item-description">{{selectedIngredient.description}}</p>
+      </ng-container>
+    </ng-container>
   </div>
-
-
-
-  <div class="navigation-buttons">
-    <button class="dropdown-btn" (click)="toggleDropdown('malts')">Malts</button>
-    <button class="dropdown-btn" (click)="toggleDropdown('hops')">Houblons</button>
-    <button class="dropdown-btn" (click)="toggleDropdown('miscIngredients')">Misc Ingredients</button>
-    <button class="confirmation-btn" (click)="calculateBeerProfile()" style="float:right;">Brew This</button>
-  </div>
-
-  <div class="dropdown">
-
-    <div class="ingredient-dropdown" *ngIf="showDropdown('malts')">
-      <ul>
-        <li *ngFor="let malt of malts">
-          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(malt)" (mouseleave)="setSelectedIngredient(null)">
-            <img src="assets/images/malt1.png" alt="Ingredient Image" class="ingredient-image" />
-            <div class="ingredient-details">
-              <div class="ingredient-name">{{ malt.name }}</div>
-            </div>
+</div>
+<div class="navigation-buttons">
+  <button class="dropdown-btn" (click)="toggleDropdown('malts')">Malts</button>
+  <button class="dropdown-btn" (click)="toggleDropdown('hops')">Houblons</button>
+  <button class="dropdown-btn" (click)="toggleDropdown('miscIngredients')">Divers</button>
+  <button class="confirmation-btn" (click)="calculateBeerProfile()" style="float:right;">Brew This</button>
+</div>
+<div class="dropdown">
+  <div class="ingredient-dropdown" *ngIf="showDropdown('malts')">
+    <ul>
+      <li *ngFor="let malt of malts">
+        <div class="ingredient-item" (mouseenter)="setSelectedIngredient(malt)" (mouseleave)="setSelectedIngredient(null)">
+          <img src="{{malt.image}}" alt="Ingredient Image" class="ingredient-image" />
+          <div class="ingredient-details">
+            <div class="ingredient-name">{{ malt.name }}</div>
+          </div>
+          <ng-container *ngIf="malt.purchased">
             <div class="ingredient-input">
               <input type="checkbox" [checked]="malt.checked" (change)="handleCheckboxChange(malt)"/>
               <div *ngIf="malt.checked" class="quantity-input">
-                <input type="number" [(ngModel)]="malt.quantityPerLiter" (change)="handleQuantityChange(malt, malt.quantityPerLiter)" placeholder="Quantity per liter" min="0"/>
-
-
+                <input type="number" [(ngModel)]="malt.quantityPerLiter" (change)="handleQuantityChange(malt, malt.quantityPerLiter)" placeholder="Quantity per liter" min="0" max="1"/>kg/L
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+        </ng-container>
+        <ng-container *ngIf="!malt.purchased">
+          <button (click)="purchaseIngredient(malt)">Débloquer</button>
+          <span class="unlock-cost">Coût : {{ malt.unlockCost | scientificNotation }}€</span>
+        </ng-container>
+        </div>
+      </li>
+    </ul>
   </div>
-    <!-- ...other code... -->
-
-    <!-- New element to display the detailed information -->
-
-
-
-
-  <div class="dropdown">
-
-    <div class="ingredient-dropdown" *ngIf="showDropdown('hops')">
-      <ul>
-        <li *ngFor="let hop of hops">
-          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(hop)" (mouseleave)="setSelectedIngredient(null)">
-            <img src="assets/images/hop1.png" alt="Ingredient Image" class="ingredient-image" />
-            <div class="ingredient-details">
-              <div class="ingredient-name">{{ hop.name }}</div>
-            </div>
+</div>
+<div class="dropdown">
+  <div class="ingredient-dropdown" *ngIf="showDropdown('hops')">
+    <ul>
+      <li *ngFor="let hop of hops">
+        <div class="ingredient-item" (mouseenter)="setSelectedIngredient(hop)" (mouseleave)="setSelectedIngredient(null)">
+          <img src="{{hop.image}}" alt="Ingredient Image" class="ingredient-image" />
+          <div class="ingredient-details">
+            <div class="ingredient-name">{{ hop.name }}</div>
+          </div>
+          <ng-container *ngIf="hop.purchased">
             <div class="ingredient-input">
               <input type="checkbox" [checked]="hop.checked" (change)="handleCheckboxChange(hop)"/>
               <div *ngIf="hop.checked" class="quantity-input">
-                <input type="number" [(ngModel)]="hop.quantityPerLiter" (change)="handleQuantityChange(hop, hop.quantityPerLiter)" placeholder="Quantity per liter" min="0" />
-
-
+                <input type="number" [(ngModel)]="hop.quantityPerLiter" (change)="handleQuantityChange(hop, hop.quantityPerLiter)" placeholder="Quantity per liter" min="0" max="10"/>g/L
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+          </ng-container>
+          <ng-container *ngIf="!hop.purchased">
+            <button (click)="purchaseIngredient(hop)">Débloquer</button>
+            <span class="unlock-cost">Coût : {{ hop.unlockCost | scientificNotation}}€</span>
+          </ng-container>
+        </div>
+      </li>
+    </ul>
   </div>
-  <div class="dropdown">
+</div>
+<div class="dropdown">
+  <div class="ingredient-dropdown" *ngIf="showDropdown('miscIngredients')">
+    <ul>
+      <li *ngFor="let miscIngredient of miscIngredients">
+        <div class="ingredient-item" (mouseenter)="setSelectedIngredient(miscIngredient)" (mouseleave)="setSelectedIngredient(null)">
+          <img src="{{miscIngredient.image}}" alt="Ingredient Image" class="ingredient-image" />
 
-    <div class="ingredient-dropdown" *ngIf="showDropdown('miscIngredients')">
-      <ul>
-        <li *ngFor="let miscIngredient of miscIngredients">
-          <div class="ingredient-item" (mouseenter)="setSelectedIngredient(miscIngredient)" (mouseleave)="setSelectedIngredient(null)">
-            <img src="assets/images/pomme1.png" alt="Ingredient Image" class="ingredient-image" />
-            <div class="ingredient-details">
-              <div class="ingredient-name">{{ miscIngredient.name }}</div>
-            </div>
+          <div class="ingredient-details">
+            <div class="ingredient-name">{{ miscIngredient.name }}</div>
+          </div>
+          <ng-container *ngIf="miscIngredient.purchased">
             <div class="ingredient-input">
               <input type="checkbox" [checked]="miscIngredient.checked" (change)="handleCheckboxChange(miscIngredient)"/>
               <div *ngIf="miscIngredient.checked" class="quantity-input">
-                <input type="number" [(ngModel)]="miscIngredient.quantityPerLiter" (change)="handleQuantityChange(miscIngredient, miscIngredient.quantityPerLiter)" placeholder="Quantity per liter" min="0" />
-
-
+                <input type="number" [(ngModel)]="miscIngredient.quantityPerLiter" (change)="handleQuantityChange(miscIngredient, miscIngredient.quantityPerLiter)" placeholder="Quantity per liter" min="0" max="1" />
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+          </ng-container>
+          <ng-container *ngIf="!miscIngredient.purchased">
+            <button (click)="purchaseIngredient(miscIngredient)">Débloquer</button>
+            <span class="unlock-cost">Coût : {{ miscIngredient.unlockCost | scientificNotation }}€</span>
+          </ng-container>
+
+        </div>
+      </li>
+    </ul>
   </div>
+</div>
 

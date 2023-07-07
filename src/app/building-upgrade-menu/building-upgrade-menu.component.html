@@ -1,0 +1,48 @@
+
+<div class="upgrade-container">
+  <div class="upgrade-row" *ngFor="let row of upgradeRows">
+    <div class="upgrade-item" *ngFor="let upgrade of row">
+      <img class="upgrade-image" src="{{ upgrade.image }}" (click)="buyUpgrade(upgrade)" (mouseover)="showPopup($event, upgrade)" (mouseout)="hidePopup(upgrade)" [ngClass]="{ 'unavailable-upgrade': !canPurchaseUpgrade(upgrade) }">
+      <div class="popup" *ngIf="upgrade.showPopup" [ngStyle]="popupStyle">
+        <div class="popup-content">
+          <div class="cost">
+            <p style="font-weight: bold; font-size: larger;">{{upgrade.name}}</p>
+            <p style="margin-left: auto;">{{upgrade.baseCost}}€</p>
+          </div>
+          <div class="description">
+            <p>{{upgrade.description}}</p>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="building-container">
+  <div class="buildings">
+    <ul>
+      <li *ngFor="let building of allBuildings" (click)="buyBuilding(building)" (mouseover)="showPopup($event, building)" (mouseout)="hidePopup(building)" [ngClass]="{'disabled': !building.available}" >
+        <div class="building-item" *ngIf="building.available" >
+          <img src="{{building.image}}" alt="Ingredient Image" class="building-image" />
+            <div class="building-name">{{building.name}}</div>
+            <div class="building-numbers">
+              <div class="building-amount">{{building.amount}}</div>
+              <div class="building-cost">{{calculateBuildingCost(building) | scientificNotation}}€</div>
+            </div>
+        </div>
+        <div class="popup" *ngIf="building.showPopup" [ngStyle]="popupStyle">
+          <div class="popup-content">
+            <p> Génère {{realLPS(building)| scientificNotation }} LPS par {{building.name}}</p>
+            <p> {{building.amount}} {{building.name}} génèrent {{building.LPS | scientificNotation }} LPS soit {{building.LPS*100/totalLPS | scientificNotation}} % de la production</p>
+            <p>{{building.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+

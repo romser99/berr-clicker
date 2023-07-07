@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Pot",
+    "caterogy" : "building",
+    "baseLPS" : 0.1,
+    "baseCost" : 20,
+    "description": "Le strict nécessaire pour brasser",
+    "threshold": 20,
+    "image":"assets/images/Buildings/Pot.png"
+  },
+  {
+    "name": "Cuve",
+    "caterogy" : "building",
+    "baseLPS" : 1,
+    "baseCost" : 200,
+    "description": "Refroidisseur interne ou par la paroi le débat sans fin",
+    "threshold": 500,
+    "image":"assets/images/Buildings/Cuve.png"
+  },
+  {
+    "name": "Brasserie",
+    "caterogy" : "building",
+    "baseLPS" : 8,
+    "baseCost" : 3000,
+    "description": "Avec bar à l'intérieur évidemment...",
+    "threshold": 4000,
+    "image":"assets/images/Buildings/Brasserie.png"
+  },
+  {
+    "name": "Puit",
+    "caterogy" : "building",
+    "baseLPS" : 40,
+    "baseCost" : 18000,
+    "description": "Bière brassée lors d'anciens temps géologiques",
+    "threshold": 20000,
+    "image":"assets/images/Buildings/Puit.png"
+  },
+  {
+    "name": "Nains",
+    "caterogy" : "building",
+    "baseLPS" : 150,
+    "baseCost" : 170000,
+    "description": "Par chance ils produisent bien plus qu'ils ne consomment",
+    "threshold": 200000,
+    "image":"assets/images/Buildings/Armeenains.png"
+  },
+  {
+    "name": "Autel",
+    "caterogy" : "building",
+    "baseLPS" : 800,
+    "baseCost" : 1300000,
+    "description": "Il changea ainsi l'eau en bière",
+    "threshold": 1000000,
+    "image":"assets/images/Buildings/Autel.png"
+  },
+  {
+    "name": "ADN",
+    "caterogy" : "building",
+    "baseLPS" : 3000,
+    "baseCost" : 15000000,
+    "description": "Modification génétique des ingérdients de base",
+    "threshold": 12000000,
+    "image":"assets/images/Buildings/DNA.png"
+  },
+  {
+    "name": "Hop-Coin",
+    "caterogy" : "building",
+    "baseLPS" : 15000,
+    "baseCost" : 200000000,
+    "description": "Introduction de la Hop-Coin,directement convertible en bière, dans l'économie",
+    "threshold": 200000000,
+    "image":"assets/images/Buildings/Crypto.png"
+  },
+  {
+    "name": "Eau Lunaire",
+    "caterogy" : "building",
+    "baseLPS" : 100000,
+    "baseCost" : 7000000000,
+    "description": "Utilisation de l'eau lunaire pour les brasseries",
+    "threshold": 7000000000,
+    "image":"assets/images/Buildings/Lune.png"
+  }
+
+
+]

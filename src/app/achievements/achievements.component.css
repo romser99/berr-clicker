@@ -1,0 +1,36 @@
+
+.encapsulation {
+width : 30vw;
+height : 60vh;
+
+}
+.navigation-buttons{
+  margin:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+  width: 90%;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.dropdown-btn {
+  background-color: #8B4513;
+  color: #f1daca;
+  border: none;
+}
+
+.dropdown-btn:hover {
+  background-color: #b7652a;
+  color: #f1daca;
+  border: none;
+}
+
+.tuto {
+  margin-left : 5px;
+  margin-right : 5px;
+  color : rgb(236, 233, 233)
+}
