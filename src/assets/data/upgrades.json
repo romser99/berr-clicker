@@ -108,8 +108,8 @@
     "specialEffect" : "multLPC",
     "baseCost" : 100000,
     "image":"assets/images/Upgrades/Homebrew.png",
-    "description": "Multiplie par 5 le volume de bière brassé manuellement",
-    "bonus": 5
+    "description": "Multiplie par 2 le volume de bière brassé manuellement",
+    "bonus": 2
   },
   {
     "name":"Cuves industrielles",

@@ -94,7 +94,7 @@ export class BeerClickerComponent implements OnInit {
 
 
   compteur(event: MouseEvent) {
-    const increment = (((1+this.volumeBaseBonus+this.potUpgrade)*this.volumeMultiplier)+(this.volumeLPSBonus*this.totalLPS/100)) * ((this.beerMultiplier * this.revenue) - this.cost);
+    const increment =(((1+this.volumeBaseBonus+this.potUpgrade)*this.volumeMultiplier)+(this.volumeLPSBonus*this.totalLPS/100)) * ((this.beerMultiplier * this.revenue) - this.cost);
     this.money += increment;
     this.totalIncome += increment;
     localStorage.setItem('totalIncome', this.totalIncome.toString());
