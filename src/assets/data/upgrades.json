@@ -106,7 +106,7 @@
     "threshold" : 10,
     "multiplier" : 1,
     "specialEffect" : "multLPC",
-    "baseCost" : 100000,
+    "baseCost" : 1000000,
     "image":"assets/images/Upgrades/Homebrew.png",
     "description": "Multiplie par 2 le volume de bière brassé manuellement",
     "bonus": 2
