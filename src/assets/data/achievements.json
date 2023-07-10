@@ -1,0 +1,56 @@
+[
+  {
+    "name" : "Santé !",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod1.png",
+    "description" : "Brasses ta première bière",
+    "subtext" : "Tout commence ici...",
+    "filter" : "TotProd",
+    "threshold" : "1"
+  },
+  {
+    "name" : "Brasseur amateur",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod2.png",
+    "description" : "Brasses 100 litres be bière",
+    "subtext" : "De quoi faire plaisir à ses copains",
+    "filter" : "TotProd",
+    "threshold" : "100"
+  },
+  {
+    "name" : "Microbrasserie",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod3.png",
+    "description" : "Brasses 10.000 litres be bière",
+    "subtext" : "A quand le craft beer festival ?",
+    "filter" : "TotProd",
+    "threshold" : "10000"
+  },
+  {
+    "name" : "Grande distribution",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod4.png",
+    "description" : "Brasses 1.000.000 litres be bière",
+    "subtext" : "On joue dans la cour des grands",
+    "filter" : "TotProd",
+    "threshold" : "1000000"
+  },
+  {
+    "name" : "Fournisseur mondial",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod5.png",
+    "description" : "Brasses 100.000.000 litres be bière",
+    "subtext" : "",
+    "filter" : "TotProd",
+    "threshold" : "100000000"
+  },
+  {
+    "name" : "Fournisseur mondial",
+    "type" : "archievement",
+    "image" : "assets/images/achievements/Prod6.png",
+    "description" : "Brasses 100.000.000 litres be bière",
+    "subtext" : "On joue dans la cour des grands",
+    "filter" : "TotProd",
+    "threshold" : "10.000.000"
+  }
+]
