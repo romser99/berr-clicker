@@ -130,7 +130,7 @@ export class BeerCreationMenuComponent implements OnInit {
     const savedIngredients = localStorage.getItem('gameIngredients');
     if (savedIngredients) {
       const { malts, hops, miscIngredients } = JSON.parse(savedIngredients);
-      console.log(malts)
+
       this.malts = malts;
       this.hops = hops;
       this.miscIngredients = miscIngredients;
@@ -435,7 +435,7 @@ export class BeerCreationMenuComponent implements OnInit {
 
 
       );
-      console.log()
+
       if (distanceProfile>distanceProfileTemp){
         distanceProfile = distanceProfileTemp;
         distanceFlavor = distanceFlavorTemp;
@@ -482,7 +482,7 @@ export class BeerCreationMenuComponent implements OnInit {
     else if (distanceFlavor>=16){
       this.flavorMultiplier=1;
     }
-    console.log(this.flavorMultiplier)
+
 
     this.beerMultiplier = this.flavorMultiplier*this.profileMultiplier
     if (this.beerMultiplier<0.3){
@@ -538,7 +538,7 @@ export class BeerCreationMenuComponent implements OnInit {
         }
       }
     }
-    console.log(this.beerProfile.flavorProfile)
+    
     this.saveIngredients();
   }
 

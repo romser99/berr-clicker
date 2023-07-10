@@ -9,6 +9,7 @@ export class GameStatsService {
 
   constructor() { }
   private totalIncome: BehaviorSubject<number> = new BehaviorSubject<number>(1);
+  private storedStats: BehaviorSubject<number> = new BehaviorSubject<any>(0);
   private money: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private totalLPS: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private volumeMultiplier: BehaviorSubject<number> = new BehaviorSubject<number>(1);
@@ -23,6 +24,13 @@ export class GameStatsService {
 
   setTotalIncome(value: number): void {
     this.totalIncome.next(value);
+  }
+  getstoredStats(): Observable<any> {
+    return this.storedStats.asObservable();
+  }
+
+  setstoredStats(value: any): void {
+    this.storedStats.next(value);
   }
 
 

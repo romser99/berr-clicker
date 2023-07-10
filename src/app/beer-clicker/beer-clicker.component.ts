@@ -29,6 +29,11 @@ export class BeerClickerComponent implements OnInit {
   potUpgrade : number = 0
   achievementMenu : boolean = true
 
+  storedStats = {
+    totalProd: 0
+
+  }
+
 
 
 
@@ -64,6 +69,7 @@ export class BeerClickerComponent implements OnInit {
 
 
 
+
   }
 
 
@@ -76,6 +82,11 @@ export class BeerClickerComponent implements OnInit {
 
   ngOnInit() {
     //récupération du score
+    const storedStats = localStorage.getItem('storedStats')
+    if (storedStats) {
+      this.storedStats = JSON.parse(storedStats)
+
+    }
     const storedmoney = localStorage.getItem('money');
     if (storedmoney) {
       this.money = parseInt(storedmoney, 10);
@@ -84,7 +95,8 @@ export class BeerClickerComponent implements OnInit {
     if (storedtotalIncome) {
       this.totalIncome = parseInt(storedtotalIncome, 10);
     }
-    console.log(this.totalIncome);
+
+    this.gameStatsService.setstoredStats(this.storedStats)
     this.gameStatsService.setTotalIncome(this.totalIncome);
     this.gameStatsService.setMoney(this.money);
 
@@ -117,8 +129,11 @@ export class BeerClickerComponent implements OnInit {
         this.popups = this.popups.filter(p => p !== popup);
       }, 900);
     }, 900);
-    console.log(increment)
-    console.log(this.volumeMultiplier)
+
+    this.storedStats.totalProd += (1+this.volumeBaseBonus+this.potUpgrade)*this.volumeMultiplier+(this.volumeLPSBonus*this.totalLPS/100)
+    this.gameStatsService.setstoredStats(this.storedStats);
+    localStorage.setItem('storedStats', JSON.stringify(this.storedStats));
+
   }
 
 
@@ -147,6 +162,9 @@ export class BeerClickerComponent implements OnInit {
       localStorage.setItem('totalIncome', this.totalIncome.toString());
       this.gameStatsService.setMoney(this.money);
       this.gameStatsService.setTotalIncome(this.totalIncome);
+      this.storedStats.totalProd += this.totalLPS * 0.2
+      this.gameStatsService.setstoredStats(this.storedStats);
+      localStorage.setItem('storedStats', JSON.stringify(this.storedStats));
     });
   }
 

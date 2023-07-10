@@ -3,8 +3,24 @@
     <button class="dropdown-btn" (click)="toggleDropdown('succes')">Succès</button>
     <button class="dropdown-btn" (click)="toggleDropdown('tuto')">Tutorial</button>
   </div>
-  <div class="infos" *ngIf="showDropdown('succes')">
-    <p>WIP WIP WIP WIP WIP</p>
+  <div class="achievement-container" *ngIf="showDropdown('succes')">
+    <div class="achievement-row" *ngFor="let row of achievementsRows">
+      <div class="achievement-item" *ngFor="let achievement of row">
+        <img *ngIf="achievement.unlocked" [src]="achievement.image" alt="Achievement Image" class="achievement-image" (mouseover)="showPopup($event, achievement)" (mouseout)="hidePopup(achievement)" />
+        <img *ngIf="!achievement.unlocked" src="assets/images/achievements/Locked.png" alt="Default Image" class="achievement-image" />
+        <div class="popup" *ngIf="achievement.showPopup" >
+          <div class="popup-content">
+            <div class="cost">
+              <p style="font-weight: bold; font-size: larger;">{{achievement.name}}</p>
+            </div>
+            <div class="description">
+              <p>{{achievement.description}}</p>
+              <p>{{achievement.subtext}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="infos" *ngIf="showDropdown('tuto')">
     <p class="tuto">Bienvenue Dans Beer Clicker !!!</p>

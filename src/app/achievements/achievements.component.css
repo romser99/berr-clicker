@@ -34,3 +34,74 @@ height : 60vh;
   margin-right : 5px;
   color : rgb(236, 233, 233)
 }
+.achievement-container {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 35%;
+  background-color: #8B4513;
+  border: 1px solid #654321;
+  border-radius: 5px;
+  overflow-y: auto;
+
+}
+
+.achievement-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+
+}
+
+
+.achievement-cost {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.achievement-image {
+  width: 50px;
+  height: 50px;
+}
+.popup {
+  position : absolute;
+  background-color: #f1daca;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height : 15vh;
+  width : 20vw;
+  top : -12.5vh;
+  left : -19.5vw
+
+}
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top : 0
+}
+
+
+.description {
+  font-size: 12px;
+  margin-top: 5px;
+}
+

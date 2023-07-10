@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BeerClickerComponent } from './beer-clicker/beer-clicker.component';
 
 const routes: Routes = [
-  { path: 'beer-clicker', component: BeerClickerComponent }
+  { path: '', component: BeerClickerComponent }
 ];
 
 @NgModule({

@@ -92,7 +92,7 @@ export class BuildingUpgradeMenuComponent implements OnInit, OnDestroy {
           showpopup : false
         };
       });
-      console.log(this.allUpgrades);
+
     });
   }
 
@@ -109,7 +109,7 @@ export class BuildingUpgradeMenuComponent implements OnInit, OnDestroy {
           showpopup : false
         };
       });
-      console.log(this.allBuildings);
+
     });
 
   }
@@ -197,7 +197,7 @@ export class BuildingUpgradeMenuComponent implements OnInit, OnDestroy {
       const building = this.allBuildings.find((b) => b.name === upgrade.target);
       building.multipliers.push(upgrade.multiplier);
       if (upgrade.specialEffect != ""){
-        console.log("here")
+
         this.handleSpecialUpgrade(upgrade)
 
       }
@@ -307,7 +307,7 @@ export class BuildingUpgradeMenuComponent implements OnInit, OnDestroy {
     if(upgrade.specialEffect == "PotLPC"){
       const pot = this.allBuildings.find((b) => b.name === "Pot");
       this.upgradeBonuses.potUpgrade = true;
-      console.log(this.upgradeBonuses.potUpgrade)
+
     }
     if(upgrade.specialEffect == "cuveclass"){
       this.upgradeBonuses.cuveUpgrades[upgrade.target] += 1

@@ -1,6 +1,7 @@
 {
   "name": "beer-clicker",
   "version": "0.0.0",
+  "homepage": "https://romser99.github.io",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
